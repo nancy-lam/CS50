@@ -1,0 +1,20 @@
+1. If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+
+First, we will calculate average energy, valence and danceability for example from the data in songs.db
+
+SELECT AVG(energy) FROM songs;
+Average energy = 0.65906
+
+SELECT AVG(valence) FROM songs;
+Average valence = 0.484443
+
+SELECT AVG(danceability) FROM songs;
+Average danceability = 0.71646
+
+This person's music has high energy and danceability but the valence (measure of happiness) is lower than 0.5
+so we can characterise the listener's audio aura as energetic, balanced in emotional expression, and dance-oriented
+
+2. Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener.
+What better ways of calculating this aura would you propose?
+
+Instead of using average for energy, valence and danceability, we should include other factors such as how many time that they play the music and use weighted average. 
